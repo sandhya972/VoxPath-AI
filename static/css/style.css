@@ -1,0 +1,285 @@
+/* ==============================
+   VoxPath AI - Modern AI Studio
+   ============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #F5F7F2;
+    color: #172B2A;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    background: #FFFFFF;
+    border-bottom: 1px solid #E5EBE5;
+}
+
+header h1 {
+    font-size: 28px;
+    color: #176B62;
+    font-weight: 700;
+}
+
+header p {
+    color: #71817B;
+    font-size: 14px;
+}
+
+/* Main Content */
+
+main {
+    width: 85%;
+    max-width: 1000px;
+    margin: 65px auto;
+    flex: 1;
+}
+
+/* Welcome Section */
+
+.welcome {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.welcome h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: #172B2A;
+}
+
+.welcome p {
+    color: #71817B;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+/* Main Voice Card */
+
+.voice-section {
+    background: #FFFFFF;
+    border: 1px solid #E5EBE5;
+    border-radius: 22px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 12px 35px rgba(23, 43, 42, 0.07);
+}
+
+.voice-section h2 {
+    font-size: 26px;
+    color: #176B62;
+    margin-bottom: 15px;
+}
+
+#status {
+    color: #71817B;
+    margin-bottom: 25px;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Buttons */
+
+#recordBtn,
+#sendBtn {
+    background: #176B62;
+    color: #FFFFFF;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#recordBtn:hover,
+#sendBtn:hover {
+    background: #12564F;
+    transform: translateY(-2px);
+    box-shadow: 0 7px 18px rgba(23, 107, 98, 0.2);
+}
+
+/* Reset Button */
+
+#resetBtn {
+    background: #FFF1EC;
+    color: #D96F50;
+    border: 1px solid #F5D2C6;
+    padding: 14px 25px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: all 0.3s ease;
+}
+
+#resetBtn:hover {
+    background: #FCE2D9;
+}
+
+/* Typed Chat Section */
+
+.typed-chat {
+    margin-top: 40px;
+    padding: 25px;
+    background: #F5F7F2;
+    border: 1px solid #E5EBE5;
+    border-radius: 16px;
+}
+
+.typed-chat h3 {
+    color: #176B62;
+    margin-bottom: 20px;
+    font-size: 19px;
+}
+
+#typedForm {
+    display: flex;
+    gap: 12px;
+}
+
+#typedInput {
+    flex: 1;
+    min-width: 0;
+    padding: 15px;
+    border: 1px solid #D9E2DA;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+    background: #FFFFFF;
+    color: #172B2A;
+    transition: border 0.3s ease;
+}
+
+#typedInput:focus {
+    border-color: #176B62;
+    box-shadow: 0 0 0 3px rgba(23, 107, 98, 0.1);
+}
+
+#typedInput::placeholder {
+    color: #A0ADA5;
+}
+
+/* Transcript and Response Cards */
+
+#transcript-section,
+#response-section {
+    margin-top: 30px;
+    padding: 25px;
+    background: #F9FBF8;
+    border: 1px solid #E5EBE5;
+    border-radius: 14px;
+    text-align: left;
+}
+
+#transcript-section h3,
+#response-section h3 {
+    color: #176B62;
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+#transcript,
+#response {
+    color: #52635C;
+    line-height: 1.8;
+    font-size: 15px;
+    white-space: pre-wrap;
+}
+
+/* Audio Player */
+
+#audioPlayer {
+    margin-top: 25px;
+    width: 100%;
+}
+
+/* Keyboard Focus */
+
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid #F28C6B;
+    outline-offset: 3px;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #71817B;
+    font-size: 13px;
+    border-top: 1px solid #E5EBE5;
+    background: #FFFFFF;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        padding: 22px 5%;
+    }
+
+    main {
+        width: 92%;
+        margin: 40px auto;
+    }
+
+    .welcome h2 {
+        font-size: 29px;
+    }
+
+    .voice-section {
+        padding: 25px 18px;
+    }
+
+    #typedForm {
+        flex-direction: column;
+    }
+
+    #recordBtn,
+    #sendBtn,
+    #resetBtn {
+        width: 100%;
+        margin: 8px 0;
+    }
+
+    .typed-chat {
+        padding: 18px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .welcome h2 {
+        font-size: 25px;
+    }
+
+    .voice-section h2 {
+        font-size: 22px;
+    }
+
+    #transcript-section,
+    #response-section {
+        padding: 18px;
+    }
+}

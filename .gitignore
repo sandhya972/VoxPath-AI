@@ -1,0 +1,8 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+instance/
+uploads/
+static/audio/*.wav
+test_audio.wav.m4a
