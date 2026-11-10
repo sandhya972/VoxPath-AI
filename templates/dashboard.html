@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard | VoxPath AI{% endblock %}
+
+{% block heading %}Dashboard{% endblock %}
+
+{% block content %}
+
+<section class="dashboard-welcome">
+
+    <span class="welcome-tag">WELCOME TO VOXPATH AI</span>
+
+    <h1>Your Career Journey Starts Here.</h1>
+
+    <p>
+        Explore career opportunities, strengthen your skills,
+        prepare for interviews and build your future.
+    </p>
+
+    <a href="/career-mentor" class="primary-link">
+        Talk to Career Mentor →
+    </a>
+
+</section>
+
+
+<section class="section-heading">
+    <h2>Your Workspace</h2>
+    <p>Choose a tool to continue your career preparation.</p>
+</section>
+
+
+<section class="feature-grid">
+
+    <a href="/career-mentor" class="feature-card">
+        <div class="feature-icon">🎙</div>
+        <h3>Career Mentor</h3>
+        <p>Get career guidance through voice and text conversations.</p>
+        <span>Explore →</span>
+    </a>
+
+    <a href="/job-assistant" class="feature-card">
+        <div class="feature-icon">💼</div>
+        <h3>Job & Internship Assistant</h3>
+        <p>Understand job descriptions and internship requirements.</p>
+        <span>Explore →</span>
+    </a>
+
+    <a href="/skill-gap" class="feature-card">
+        <div class="feature-icon">📊</div>
+        <h3>Skill Gap Analyzer</h3>
+        <p>Identify skills to develop for your target role.</p>
+        <span>Explore →</span>
+    </a>
+
+    <a href="/roadmap" class="feature-card">
+        <div class="feature-icon">🗺</div>
+        <h3>Preparation Roadmap</h3>
+        <p>Organize your learning with structured preparation plans.</p>
+        <span>Explore →</span>
+    </a>
+
+    <a href="/interview" class="feature-card">
+        <div class="feature-icon">🎯</div>
+        <h3>Interview Preparation</h3>
+        <p>Practice technical and behavioral interview questions.</p>
+        <span>Explore →</span>
+    </a>
+
+    <a href="/coding" class="feature-card">
+        <div class="feature-icon">💻</div>
+        <h3>Coding Practice</h3>
+        <p>Improve your programming and problem-solving skills.</p>
+        <span>Explore →</span>
+    </a>
+
+</section>
+
+{% endblock %}

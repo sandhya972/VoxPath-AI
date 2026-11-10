@@ -1,85 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% block title %}VoxPath AI | Career Mentor{% endblock %}
 
-    <title>VoxPath AI | Your Voice Career Mentor</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% block heading %}Career Mentor{% endblock %}
 
-</head>
+{% block content %}
 
-<body>
+<section class="welcome">
 
-    <header>
-        <h1>🎙️ VoxPath AI</h1>
-        <p>Your Voice-Powered Career Mentor</p>
-    </header>
+    <h2>Welcome to VoxPath AI!</h2>
 
-    <main>
+    <p>
+        Speak naturally. Explore your career.
+        Let AI guide your journey.
+    </p>
 
-        <section class="welcome">
-            <h2>Welcome to VoxPath AI!</h2>
-            <p>
-                Speak naturally. Explore your career.
-                Let AI guide your journey.
-            </p>
-        </section>
+    <div class="career-welcome-card">
 
-        <section class="voice-section">
+        <h3>Your Personal AI Career Mentor</h3>
 
-            <h2>Talk to VoxPath</h2>
+        <p>
+            Get guidance for your career journey, explore
+            software opportunities, improve your skills,
+            and prepare for internships and interviews.
+        </p>
 
-            <p id="status">
-                Click the button below to start your conversation.
-            </p>
+        <p>
+            Your VoxPath assistant is always available.
+            Click the button at the bottom-right corner
+            to start a conversation using your voice or text.
+        </p>
 
-            <button id="recordBtn">
-    🎤 Start Recording
-</button>
+        <span class="coming-soon">
+            YOUR CAREER JOURNEY STARTS HERE
+        </span>
 
-<button id="resetBtn" type="button">
-    🔄 Reset Conversation
-</button>
-<div class="typed-chat">
-    <h3>Or type your message</h3>
+    </div>
 
-    <form id="typedForm">
-        <input
-            type="text"
-            id="typedInput"
-            placeholder="Ask VoxPath anything..."
-            autocomplete="off"
-            required
-        >
+</section>
 
-        <button type="submit" id="sendBtn">
-            Send Message
-        </button>
-    </form>
-</div>
+{% endblock %}
 
-            <div id="transcript-section">
-                <h3>Your Message</h3>
-                <p id="transcript">Your speech will appear here...</p>
-            </div>
-
-            <div id="response-section">
-                <h3>VoxPath's Response</h3>
-                <p id="response">Your AI response will appear here...</p>
-            </div>
-
-            <audio id="audioPlayer" controls hidden></audio>
-
-        </section>
-
-    </main>
-
-    <footer>
-        <p>Powered by Gnani AI | VoxPath AI © 2026</p>
-    </footer>
-<script src="{{ url_for('static', filename='js/script.js') }}"></script>
-</body>
-
-</html>
+{% block scripts %}
+{% endblock %}

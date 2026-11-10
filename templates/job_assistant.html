@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+
+{% block title %}Job & Internship Assistant | VoxPath AI{% endblock %}
+
+{% block heading %}Job & Internship Assistant{% endblock %}
+
+{% block content %}
+
+<section class="job-intro">
+
+    <span class="section-label">CAREER OPPORTUNITY ANALYSER</span>
+
+    <h1>Understand the role. Prepare with confidence.</h1>
+
+    <p>
+        Paste a job or internship description to understand
+        what the company expects and what skills you need.
+    </p>
+
+</section>
+
+<section class="job-input-card">
+
+    <h2>Analyse a Job Description</h2>
+
+    <label for="jobDescription">
+        Paste the job or internship description
+    </label>
+
+    <textarea
+        id="jobDescription"
+        placeholder="Paste the complete job description here..."
+        rows="10"
+    ></textarea>
+
+    <button type="button" id="analyzeJobBtn">
+        Analyse Job Description →
+    </button>
+
+    <p id="jobStatus"></p>
+
+</section>
+
+<section id="jobAnalysisResult" class="job-results" hidden>
+
+    <h2>Job Analysis Results</h2>
+
+    <!-- Quality Score -->
+
+    <div class="job-result-card">
+        <h3>📊 Job Description Quality Score</h3>
+
+        <div class="quality-score">
+            <span id="qualityScore">0</span>/100
+        </div>
+
+        <h4 id="qualityLabel"></h4>
+
+        <ul id="scoreBreakdown"></ul>
+
+        <p class="quality-note">
+            This score evaluates the completeness and structure
+            of the job description. It does not verify the company
+            or the authenticity of the opportunity.
+        </p>
+    </div>
+
+    <!-- Role Overview -->
+
+    <div class="job-result-card">
+        <h3>📌 Role Overview</h3>
+        <p id="roleOverview"></p>
+    </div>
+
+    <!-- Required Skills -->
+
+    <div class="job-result-card">
+        <h3>💻 Required Skills</h3>
+        <ul id="requiredSkills"></ul>
+    </div>
+
+    <!-- Preferred Skills -->
+
+    <div class="job-result-card">
+        <h3>⭐ Preferred Skills</h3>
+        <ul id="preferredSkills"></ul>
+    </div>
+
+    <!-- Responsibilities -->
+
+    <div class="job-result-card">
+        <h3>📋 Responsibilities</h3>
+        <ul id="responsibilities"></ul>
+    </div>
+
+    <!-- Required Qualifications -->
+
+    <div class="job-result-card">
+        <h3>🎓 Required Qualifications</h3>
+        <ul id="requiredQualifications"></ul>
+    </div>
+
+    <!-- Preferred Qualifications -->
+
+    <div class="job-result-card">
+        <h3>🌟 Preferred Qualifications</h3>
+        <ul id="preferredQualifications"></ul>
+    </div>
+
+    <!-- Preparation Suggestions -->
+
+    <div class="job-result-card">
+        <h3>🚀 Personalized Preparation Recommendations</h3>
+        <ul id="preparationSuggestions"></ul>
+    </div>
+
+</section>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/job_assistant.js') }}"></script>
+{% endblock %}

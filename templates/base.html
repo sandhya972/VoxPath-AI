@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}VoxPath AI{% endblock %}</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body class="dashboard-layout">
+
+    <aside class="sidebar">
+
+        <div class="brand">
+            <h2>🎙 VoxPath</h2>
+            <span>AI Career Platform</span>
+        </div>
+
+        <div class="sidebar-label">WORKSPACE</div>
+
+        <nav class="sidebar-nav">
+
+            <a href="/" class="nav-link">▦ Dashboard</a>
+
+            <a href="/career-mentor" class="nav-link">
+                ◉ Career Mentor
+            </a>
+
+            <a href="/job-assistant" class="nav-link">
+                ◈ Job & Internship Assistant
+            </a>
+
+            <a href="/skill-gap" class="nav-link">
+                ◇ Skill Gap Analyzer
+            </a>
+
+            <a href="/roadmap" class="nav-link">
+                ▤ Preparation Roadmap
+            </a>
+
+            <a href="/interview" class="nav-link">
+                ◎ Interview Preparation
+            </a>
+
+            <a href="/coding" class="nav-link">
+                ⌘ Coding Practice
+            </a>
+
+            <div class="sidebar-label">ACTIVITY</div>
+
+            <a href="/history" class="nav-link">
+                ◷ Conversation History
+            </a>
+
+            <a href="/progress" class="nav-link">
+                ◫ My Progress
+            </a>
+
+        </nav>
+
+        <div class="sidebar-footer">
+            <span>VoxPath AI</span>
+            <small>Your career journey starts here.</small>
+        </div>
+
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <span class="topbar-label">YOUR CAREER WORKSPACE</span>
+                <h3>{% block heading %}Dashboard{% endblock %}</h3>
+            </div>
+
+            <div class="profile-badge">S</div>
+        </header>
+
+        <section class="page-content">
+            {% block content %}{% endblock %}
+                </section>
+
+        </main>
+
+    <!-- GLOBAL VOXPATH ASSISTANT -->
+
+    <div id="globalAssistant">
+
+        <button id="assistantToggle" type="button">
+            🎙 Talk to VoxPath
+        </button>
+
+        <section id="assistantPanel" hidden>
+
+            <div class="assistant-header">
+                <div>
+                    <h3>🎙 VoxPath AI</h3>
+                    <span>Your personal career assistant</span>
+                </div>
+
+                <button id="assistantClose" type="button">✕</button>
+            </div>
+
+            <div class="assistant-body">
+
+                <p id="assistantStatus">
+                    How can I help you today?
+                </p>
+
+                <div class="assistant-response">
+                    <strong>Your Message</strong>
+                    <p id="assistantTranscript">
+                        Your message will appear here.
+                    </p>
+                </div>
+
+                <div class="assistant-response">
+                    <strong>VoxPath's Response</strong>
+                    <p id="assistantReply">
+                        Your response will appear here.
+                    </p>
+                </div>
+
+                <audio id="assistantAudio" controls hidden></audio>
+
+            </div>
+
+            <div class="assistant-controls">
+
+                <button id="assistantRecord" type="button">
+                    🎤 Start Recording
+                </button>
+
+                <form id="assistantForm">
+
+                    <input
+                        type="text"
+                        id="assistantInput"
+                        placeholder="Ask VoxPath anything..."
+                        autocomplete="off"
+                        required
+                    >
+
+                    <button type="submit" id="assistantSend">
+                        Send
+                    </button>
+
+                </form>
+
+                <button id="assistantReset" type="button">
+                    Reset Conversation
+                </button>
+
+            </div>
+
+        </section>
+
+    </div>
+<script src="{{ url_for('static', filename='js/global_assistant.js') }}"></script>
+
+{% block scripts %}{% endblock %}
+</body>
+</html>
